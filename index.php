@@ -25,7 +25,8 @@
     var_export($array);
     echo "<br>";
 
-    function existe(array $arr, string $str)
+    //mettre is en prefixe du nom de fonction lorsque celle-ci renvoie un booléen
+    function is_existe(array $arr, string $str)
     {
         $bool = false;
         foreach ($arr as $key => $value) {
@@ -36,9 +37,9 @@
         return $bool;
     }
 
-    var_export(existe($array, 'dauphin'));
+    var_export(is_existe($array, 'dauphin'));
     echo "<br>";
-    var_export(existe($array, 'requin'));
+    var_export(is_existe($array, 'requin'));
     echo "<br>";
 
     function PHP_array_to_HTML_table(array $array)
