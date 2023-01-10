@@ -37,6 +37,18 @@
         return $bool;
     }
 
+    // le return dans la boucle sert a sortir de la boucle dès que l'on a trouvé ce que l'on recherche,
+    // cela évite de parcourir tous les éléments du tableau pour rien
+    function is_existe_optimal(array $arr, string $str)
+    {
+        foreach ($arr as $key => $value) {
+            if ($value == $str) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     var_export(is_existe($array, 'dauphin'));
     echo "<br>";
     var_export(is_existe($array, 'requin'));
